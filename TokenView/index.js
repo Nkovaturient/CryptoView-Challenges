@@ -60,7 +60,7 @@ const validateRequest = [
     body('walletAddress').isEthereumAddress().withMessage('Invalid wallet address'),
 ];
 
-// Token balance endpoint
+// Fetch Token balance endpoint
 app.post('/api/token-balance', validateRequest, async (req, res) => {
     try {
         // Validation check
@@ -113,20 +113,6 @@ app.post('/api/token-balance', validateRequest, async (req, res) => {
             lastBlock: currentBlock,
             lastUpdated: new Date()
         };
-
-        // Update cache
-        // await TokenBalance.findOneAndUpdate(
-        //     { 
-        //         tokenAddress: normalizedTokenAddress, 
-        //         walletAddress: normalizedWalletAddress 
-        //     },
-        //     tokenData,
-        //     { 
-        //         upsert: true, 
-        //         new: true,
-        //         setDefaultsOnInsert: true
-        //     }
-        // );
 
         // Send response
         return res.status(200).json({

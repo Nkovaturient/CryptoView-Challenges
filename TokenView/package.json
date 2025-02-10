@@ -6,7 +6,11 @@
   "scripts": {
     "start": "nodemon index.js"
   },
-  "keywords": ["Token View", "Token Balance", "Token View API"],
+  "keywords": [
+    "Token View",
+    "Token Balance",
+    "Token View API"
+  ],
   "author": "Neha Kumari",
   "license": "ISC",
   "dependencies": {
@@ -14,8 +18,6 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "express-validator": "^7.2.1",
-    "mongodb": "^6.13.0",
-    "mongoose": "^8.10.0",
     "nodemon": "^3.1.9",
     "web3": "^4.16.0"
   }
